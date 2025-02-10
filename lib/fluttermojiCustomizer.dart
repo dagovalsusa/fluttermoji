@@ -174,6 +174,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
         indicatorColor: widget.theme.selectedIconColor,
         indicatorPadding: EdgeInsets.all(2),
         tabs: navbarWidgets,
+        dividerColor: Colors.transparent,
       ),
     );
   }
@@ -317,7 +318,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
             controller: tabController,
             children: attributeGrids,
           ),
-          bottomNavigationBar: bottomNavBar(navbarWidgets),
+          // bottomNavigationBar: bottomNavBar(navbarWidgets),
         ),
       ),
     );
