@@ -46,7 +46,7 @@ class FluttermojiCustomizer extends StatefulWidget {
           " You need to provide icon paths for all attributes",
         ),
         this.theme = theme ?? FluttermojiThemeData.standard,
-        this.attributeTitles = attributeTitles ?? defaultAttributeTitles,
+        this.attributeTitles = attributeTitles ?? [],
         this.attributeIcons = attributeIcons ?? defaultAttributeIcons,
         super(key: key);
 
@@ -145,12 +145,13 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer> with Sing
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
+    final titles = widget.attributeTitles.isEmpty ? getDefaultAttributeTitles(context) : widget.attributeTitles;
     return SizedBox(
       height: widget.scaffoldHeight ?? (size.height * heightFactor),
       width: widget.scaffoldWidth ?? size.width,
       child: body(
         attributes: List<AttributeItem>.generate(
-            attributesCount, (index) => AttributeItem(iconAsset: widget.attributeIcons[index], title: widget.attributeTitles[index], key: attributeKeys[index]),
+            attributesCount, (index) => AttributeItem(iconAsset: widget.attributeIcons[index], title: titles[index], key: attributeKeys[index]),
             growable: false),
       ),
     );

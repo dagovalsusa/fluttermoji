@@ -1,0 +1,51 @@
+{
+    "@@locale": "hu",
+    "backgroundColor": "Háttérszín",
+    "@backgroundColor": {
+        "description": "Title for background color customization"
+    },
+    "skin": "Bőr",
+    "@skin": {
+        "description": "Title for skin customization"
+    },
+    "hairstyle": "Frizura",
+    "@hairstyle": {
+        "description": "Title for hairstyle customization"
+    },
+    "hairColor": "Hajszín",
+    "@hairColor": {
+        "description": "Title for hair color customization"
+    },
+    "eyes": "Szemek",
+    "@eyes": {
+        "description": "Title for eyes customization"
+    },
+    "eyebrows": "Szemöldök",
+    "@eyebrows": {
+        "description": "Title for eyebrows customization"
+    },
+    "mouth": "Száj",
+    "@mouth": {
+        "description": "Title for mouth customization"
+    },
+    "facialHair": "Arcszőrzet",
+    "@facialHair": {
+        "description": "Title for facial hair customization"
+    },
+    "facialHairColor": "Arcszőrzet Színe",
+    "@facialHairColor": {
+        "description": "Title for facial hair color customization"
+    },
+    "outfit": "Öltözék",
+    "@outfit": {
+        "description": "Title for outfit customization"
+    },
+    "outfitColor": "Öltözék Színe",
+    "@outfitColor": {
+        "description": "Title for outfit color customization"
+    },
+    "accessories": "Kiegészítők",
+    "@accessories": {
+        "description": "Title for accessories customization"
+    }
+}

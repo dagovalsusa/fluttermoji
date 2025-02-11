@@ -1,0 +1,51 @@
+{
+    "@@locale": "es",
+    "backgroundColor": "Color de Fondo",
+    "@backgroundColor": {
+        "description": "Title for background color customization"
+    },
+    "skin": "Piel",
+    "@skin": {
+        "description": "Title for skin customization"
+    },
+    "hairstyle": "Peinado",
+    "@hairstyle": {
+        "description": "Title for hairstyle customization"
+    },
+    "hairColor": "Color de Pelo",
+    "@hairColor": {
+        "description": "Title for hair color customization"
+    },
+    "eyes": "Ojos",
+    "@eyes": {
+        "description": "Title for eyes customization"
+    },
+    "eyebrows": "Cejas",
+    "@eyebrows": {
+        "description": "Title for eyebrows customization"
+    },
+    "mouth": "Boca",
+    "@mouth": {
+        "description": "Title for mouth customization"
+    },
+    "facialHair": "Vello Facial",
+    "@facialHair": {
+        "description": "Title for facial hair customization"
+    },
+    "facialHairColor": "Color de Vello Facial",
+    "@facialHairColor": {
+        "description": "Title for facial hair color customization"
+    },
+    "outfit": "Atuendo",
+    "@outfit": {
+        "description": "Title for outfit customization"
+    },
+    "outfitColor": "Color de Atuendo",
+    "@outfitColor": {
+        "description": "Title for outfit color customization"
+    },
+    "accessories": "Accesorios",
+    "@accessories": {
+        "description": "Title for accessories customization"
+    }
+}

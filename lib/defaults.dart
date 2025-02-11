@@ -1,3 +1,7 @@
+import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
+import 'generated/app_localizations.dart';
+
 /// Default list of icons that are rendered in the bottom row, indicating
 /// the attributes available to modify.
 ///
@@ -18,22 +22,26 @@ const List<String> defaultAttributeIcons = [
   "attributeicons/accessories.svg",
 ];
 
-/// Default list of titles that are rendered at the top of the widget, indicating
-/// which attribute the user is customizing.
-const List<String> defaultAttributeTitles = [
-  "Background Color",
-  "Skin",
-  "Hairstyle",
-  "Hair Colour",
-  "Eyes",
-  "Eyebrows",
-  "Mouth",
-  "Facial Hair",
-  "Facial Hair Colour",
-  "Outfit",
-  "Outfit Colour",
-  "Accessories"
-];
+/// Function to get localized titles that are rendered at the top of the widget,
+/// indicating which attribute the user is customizing.
+List<String> getDefaultAttributeTitles(BuildContext context) {
+  final locale = Localizations.localeOf(context);
+  final s = lookupS(locale);
+  return [
+    s.backgroundColor,
+    s.skin,
+    s.hairstyle,
+    s.hairColor,
+    s.eyes,
+    s.eyebrows,
+    s.mouth,
+    s.facialHair,
+    s.facialHairColor,
+    s.outfit,
+    s.outfitColor,
+    s.accessories
+  ];
+}
 
 /// List of keys used internally by this library to dereference
 /// attributes and their values in the business logic.

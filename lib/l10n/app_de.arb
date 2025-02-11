@@ -1,0 +1,51 @@
+{
+    "@@locale": "de",
+    "backgroundColor": "Hintergrundfarbe",
+    "@backgroundColor": {
+        "description": "Title for background color customization"
+    },
+    "skin": "Haut",
+    "@skin": {
+        "description": "Title for skin customization"
+    },
+    "hairstyle": "Frisur",
+    "@hairstyle": {
+        "description": "Title for hairstyle customization"
+    },
+    "hairColor": "Haarfarbe",
+    "@hairColor": {
+        "description": "Title for hair color customization"
+    },
+    "eyes": "Augen",
+    "@eyes": {
+        "description": "Title for eyes customization"
+    },
+    "eyebrows": "Augenbrauen",
+    "@eyebrows": {
+        "description": "Title for eyebrows customization"
+    },
+    "mouth": "Mund",
+    "@mouth": {
+        "description": "Title for mouth customization"
+    },
+    "facialHair": "Gesichtsbehaarung",
+    "@facialHair": {
+        "description": "Title for facial hair customization"
+    },
+    "facialHairColor": "Gesichtsbehaarungsfarbe",
+    "@facialHairColor": {
+        "description": "Title for facial hair color customization"
+    },
+    "outfit": "Outfit",
+    "@outfit": {
+        "description": "Title for outfit customization"
+    },
+    "outfitColor": "Outfit-Farbe",
+    "@outfitColor": {
+        "description": "Title for outfit color customization"
+    },
+    "accessories": "Accessoires",
+    "@accessories": {
+        "description": "Title for accessories customization"
+    }
+}

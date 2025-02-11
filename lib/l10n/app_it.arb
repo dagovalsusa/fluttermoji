@@ -1,0 +1,51 @@
+{
+    "@@locale": "it",
+    "backgroundColor": "Colore Sfondo",
+    "@backgroundColor": {
+        "description": "Title for background color customization"
+    },
+    "skin": "Pelle",
+    "@skin": {
+        "description": "Title for skin customization"
+    },
+    "hairstyle": "Acconciatura",
+    "@hairstyle": {
+        "description": "Title for hairstyle customization"
+    },
+    "hairColor": "Colore Capelli",
+    "@hairColor": {
+        "description": "Title for hair color customization"
+    },
+    "eyes": "Occhi",
+    "@eyes": {
+        "description": "Title for eyes customization"
+    },
+    "eyebrows": "Sopracciglia",
+    "@eyebrows": {
+        "description": "Title for eyebrows customization"
+    },
+    "mouth": "Bocca",
+    "@mouth": {
+        "description": "Title for mouth customization"
+    },
+    "facialHair": "Barba",
+    "@facialHair": {
+        "description": "Title for facial hair customization"
+    },
+    "facialHairColor": "Colore Barba",
+    "@facialHairColor": {
+        "description": "Title for facial hair color customization"
+    },
+    "outfit": "Vestiti",
+    "@outfit": {
+        "description": "Title for outfit customization"
+    },
+    "outfitColor": "Colore Vestiti",
+    "@outfitColor": {
+        "description": "Title for outfit color customization"
+    },
+    "accessories": "Accessori",
+    "@accessories": {
+        "description": "Title for accessories customization"
+    }
+}

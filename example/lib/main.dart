@@ -1,7 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fluttermoji/fluttermoji.dart';
+import 'package:fluttermoji/generated/app_localizations.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,6 +17,24 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       // darkTheme: ThemeData.dark(),
+      localizationsDelegates: [
+        S.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: S.supportedLocales,
+      locale: Locale('en'), // Force English for testing
+      localeResolutionCallback: (locale, supportedLocales) {
+        // Check if the current device locale is supported
+        for (var supportedLocale in supportedLocales) {
+          if (supportedLocale.languageCode == locale?.languageCode) {
+            return supportedLocale;
+          }
+        }
+        // If the locale of the device is not supported, use English
+        return Locale('en');
+      },
       home: MyHomePage(title: 'Fluttermoji'),
     );
   }

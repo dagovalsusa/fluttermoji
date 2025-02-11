@@ -1,0 +1,51 @@
+{
+    "@@locale": "zh",
+    "backgroundColor": "背景颜色",
+    "@backgroundColor": {
+        "description": "Title for background color customization"
+    },
+    "skin": "肤色",
+    "@skin": {
+        "description": "Title for skin customization"
+    },
+    "hairstyle": "发型",
+    "@hairstyle": {
+        "description": "Title for hairstyle customization"
+    },
+    "hairColor": "发色",
+    "@hairColor": {
+        "description": "Title for hair color customization"
+    },
+    "eyes": "眼睛",
+    "@eyes": {
+        "description": "Title for eyes customization"
+    },
+    "eyebrows": "眉毛",
+    "@eyebrows": {
+        "description": "Title for eyebrows customization"
+    },
+    "mouth": "嘴巴",
+    "@mouth": {
+        "description": "Title for mouth customization"
+    },
+    "facialHair": "胡须",
+    "@facialHair": {
+        "description": "Title for facial hair customization"
+    },
+    "facialHairColor": "胡须颜色",
+    "@facialHairColor": {
+        "description": "Title for facial hair color customization"
+    },
+    "outfit": "服装",
+    "@outfit": {
+        "description": "Title for outfit customization"
+    },
+    "outfitColor": "服装颜色",
+    "@outfitColor": {
+        "description": "Title for outfit color customization"
+    },
+    "accessories": "配饰",
+    "@accessories": {
+        "description": "Title for accessories customization"
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "@@locale": "hr",
+    "backgroundColor": "Boja Pozadine",
+    "@backgroundColor": {
+        "description": "Title for background color customization"
+    },
+    "skin": "Koža",
+    "@skin": {
+        "description": "Title for skin customization"
+    },
+    "hairstyle": "Frizura",
+    "@hairstyle": {
+        "description": "Title for hairstyle customization"
+    },
+    "hairColor": "Boja Kose",
+    "@hairColor": {
+        "description": "Title for hair color customization"
+    },
+    "eyes": "Oči",
+    "@eyes": {
+        "description": "Title for eyes customization"
+    },
+    "eyebrows": "Obrve",
+    "@eyebrows": {
+        "description": "Title for eyebrows customization"
+    },
+    "mouth": "Usta",
+    "@mouth": {
+        "description": "Title for mouth customization"
+    },
+    "facialHair": "Brada",
+    "@facialHair": {
+        "description": "Title for facial hair customization"
+    },
+    "facialHairColor": "Boja Brade",
+    "@facialHairColor": {
+        "description": "Title for facial hair color customization"
+    },
+    "outfit": "Odjeća",
+    "@outfit": {
+        "description": "Title for outfit customization"
+    },
+    "outfitColor": "Boja Odjeće",
+    "@outfitColor": {
+        "description": "Title for outfit color customization"
+    },
+    "accessories": "Dodaci",
+    "@accessories": {
+        "description": "Title for accessories customization"
+    }
+}
