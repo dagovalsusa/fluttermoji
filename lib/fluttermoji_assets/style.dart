@@ -1,3 +1,17 @@
+/// Background color definitions
+const Map<String, String> backgroundColor = {
+  'White': '#FFFFFF',
+  'Black': '#000000',
+  'Blue': '#0074E4',
+  'Red': '#CD2026',
+  'Green': '#3CC9AE',
+  'Yellow': '#FFC644',
+  'Purple': '#9B65FF',
+  'Pink': '#FF539C',
+  'Orange': '#FA8832',
+  'Gray': '#A0AEC0',
+};
+
 /// SVG strings for style of avatar
 const fluttermojiStyle = {
   "Transparent": "",

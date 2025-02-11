@@ -1,6 +1,19 @@
 import 'package:flutter/foundation.dart';
 
 /// Maps attribute keys to the attribute value list
+const List<String> BackgroundColor = [
+  'White',
+  'Black',
+  'Blue',
+  'Red',
+  'Green',
+  'Yellow',
+  'Purple',
+  'Pink',
+  'Orange',
+  'Gray',
+];
+
 final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
   "style": FluttermojiPropertyItem(title: "Style", property: FluttermojiStyle),
   "topType": FluttermojiPropertyItem(title: "Hair", property: TopType),
@@ -20,6 +33,7 @@ final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
       FluttermojiPropertyItem(title: "Eyebrow", property: EyebrowType),
   "mouthType": FluttermojiPropertyItem(title: "Mouth", property: MouthType),
   "skinColor": FluttermojiPropertyItem(title: "Skin", property: SkinColor),
+  "backgroundColor": FluttermojiPropertyItem(title: "Background", property: BackgroundColor),
 };
 
 /// Models the metadata needed for rendering widgets in the UI
@@ -50,6 +64,7 @@ const String emptySVGIcon = '''
 ''';
 
 const Map<String, int> defaultFluttermojiOptions = {
+  'backgroundColor': 0,
   'topType': 24,
   'accessoriesType': 0,
   'hairColor': 1,
@@ -129,6 +144,16 @@ const List<String> HairColor = [
   'Platinum',
   'Red',
   'SilverGray',
+  'DarkGray',
+  'RavenBlack',
+  'Burgundy',
+  'DarkRed',
+  'LightBrown',
+  'Caramel',
+  'RoseGold',
+  'Copper',
+  'Strawberry',
+  'Mahogany',
 ];
 
 //This is the property I skipped on purpose
@@ -167,6 +192,16 @@ const List<String> FacialHairColor = [
   'BrownDark',
   'Platinum',
   'Red',
+  'DarkGray',
+  'RavenBlack',
+  'Burgundy',
+  'DarkRed',
+  'LightBrown',
+  'Caramel',
+  'RoseGold',
+  'Copper',
+  'Strawberry',
+  'Mahogany',
 ];
 
 const List<String> ClotheType = [
@@ -184,19 +219,34 @@ const List<String> ClotheType = [
 const List<String> ClotheColor = [
   'Blue01',
   'Blue02',
+  'Blue03',
   'PastelYellow',
   'PastelGreen',
-  'Gray02',
-  'Black',
-  'Blue03',
-  'Gray01',
-  'Heather',
   'PastelBlue',
   'PastelOrange',
   'PastelRed',
-  'Pink',
-  'Red',
+  'PastelPink',
+  'PastelPurple',
+  'Gray01',
+  'Gray02',
+  'Gray03',
+  'Heather',
+  'Black',
   'White',
+  'Red',
+  'DarkRed',
+  'Pink',
+  'HotPink',
+  'Purple',
+  'Navy',
+  'Teal',
+  'Green',
+  'ForestGreen',
+  'Orange',
+  'Yellow',
+  'Brown',
+  'Maroon',
+  'Burgundy',
 ];
 
 //Not implemented

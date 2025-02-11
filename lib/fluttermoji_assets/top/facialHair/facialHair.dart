@@ -9,13 +9,22 @@ class FacialHair {
     'BrownDark': "#4A312C",
     'Platinum': "#ECDCBF",
     'Red': "#C93305",
+    'DarkGray': '#4A4A4A',
+    'RavenBlack': '#0F0F0F',
+    'Burgundy': '#800020',
+    'DarkRed': '#8B0000',
+    'LightBrown': '#B5651D',
+    'Caramel': '#C67C48',
+    'RoseGold': '#B76E79',
+    'Copper': '#B87333',
+    'Strawberry': '#BE4E48',
+    'Mahogany': '#4A0404'
   };
-  static String? generateFacialHair(
-      {String facialHairType = "Nothing", String fhColor = "Black"}) {
+  static String? generateFacialHair({String facialHairType = "Nothing", String fhColor = "Black"}) {
     String? colorHex = facialHairColor[fhColor];
 
     Map<String, dynamic> facialHair = {
-      "Nothing": '''        
+      "Nothing": '''
         ''',
       "Full Beard": '''
         <g id="Facial-Hair/Beard-Medium" transform="translate(-28.000000, -8.000000)">

@@ -34,7 +34,7 @@ class FluttermojiCircleAvatar extends StatelessWidget {
           }
           return SvgPicture.string(
             snapshot.fluttermoji.value,
-            height: radius * 1.6,
+            height: radius * 2,
             semanticsLabel: "Your Fluttermoji",
             placeholderBuilder: (context) => Center(
               child: CupertinoActivityIndicator(),

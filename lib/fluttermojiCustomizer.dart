@@ -85,17 +85,16 @@ class FluttermojiCustomizer extends StatefulWidget {
   /// in your app to let users save their selection manually.
   final bool autosave;
 
-  static const int attributesCount = 11;
+  static const int attributesCount = 12;
 
   @override
   _FluttermojiCustomizerState createState() => _FluttermojiCustomizerState();
 }
 
-class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
-    with SingleTickerProviderStateMixin {
+class _FluttermojiCustomizerState extends State<FluttermojiCustomizer> with SingleTickerProviderStateMixin {
   late FluttermojiController fluttermojiController;
   late TabController tabController;
-  final attributesCount = 11;
+  final attributesCount = 12;
   var heightFactor = 0.4, widthFactor = 0.95;
 
   @override
@@ -136,12 +135,9 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
   void onArrowTap(bool isLeft) {
     int _currentIndex = tabController.index;
     if (isLeft)
-      tabController
-          .animateTo(_currentIndex > 0 ? _currentIndex - 1 : _currentIndex);
+      tabController.animateTo(_currentIndex > 0 ? _currentIndex - 1 : _currentIndex);
     else
-      tabController.animateTo(_currentIndex < attributesCount - 1
-          ? _currentIndex + 1
-          : _currentIndex);
+      tabController.animateTo(_currentIndex < attributesCount - 1 ? _currentIndex + 1 : _currentIndex);
 
     setState(() {});
   }
@@ -154,11 +150,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
       width: widget.scaffoldWidth ?? size.width,
       child: body(
         attributes: List<AttributeItem>.generate(
-            attributesCount,
-            (index) => AttributeItem(
-                iconAsset: widget.attributeIcons[index],
-                title: widget.attributeTitles[index],
-                key: attributeKeys[index]),
+            attributesCount, (index) => AttributeItem(iconAsset: widget.attributeIcons[index], title: widget.attributeTitles[index], key: attributeKeys[index]),
             growable: false),
       ),
     );
@@ -167,6 +159,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
   Container bottomNavBar(List<Widget> navbarWidgets) {
     return Container(
       color: widget.theme.primaryBgColor,
+      padding: EdgeInsets.symmetric(horizontal: 8),
       child: TabBar(
         controller: tabController,
         isScrollable: true,
@@ -175,6 +168,8 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
         indicatorPadding: EdgeInsets.all(2),
         tabs: navbarWidgets,
         dividerColor: Colors.transparent,
+        tabAlignment: TabAlignment.start,
+        indicator: UnderlineTabIndicator(borderSide: BorderSide(width: 4.0, color: widget.theme.selectedIconColor), borderRadius: BorderRadius.circular(5)),
       ),
     );
   }
@@ -199,15 +194,11 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
 
   Widget arrowButton(bool isLeft) {
     return Visibility(
-      visible: isLeft
-          ? tabController.index > 0
-          : tabController.index < attributesCount - 1,
+      visible: isLeft ? tabController.index > 0 : tabController.index < attributesCount - 1,
       child: IconButton(
         // splashRadius: 20,
         icon: Icon(
-          isLeft
-              ? Icons.arrow_back_ios_new_rounded
-              : Icons.arrow_forward_ios_rounded,
+          isLeft ? Icons.arrow_back_ios_new_rounded : Icons.arrow_forward_ios_rounded,
           color: widget.theme.iconColor,
         ),
         onPressed: () => onArrowTap(isLeft),
@@ -225,9 +216,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
     var attributeGrids = <Widget>[];
     var navbarWidgets = <Widget>[];
 
-    for (var attributeIndex = 0;
-        attributeIndex < attributes.length;
-        attributeIndex++) {
+    for (var attributeIndex = 0; attributeIndex < attributes.length; attributeIndex++) {
       var attribute = attributes[attributeIndex];
       if (!fluttermojiController.selectedOptions.containsKey(attribute.key)) {
         fluttermojiController.selectedOptions[attribute.key] = 0;
@@ -235,8 +224,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
 
       /// Number of options available for said [attribute]
       /// Eg: "Hairstyle" attribue has 38 options
-      var attributeListLength =
-          fluttermojiProperties[attribute.key!]!.property!.length;
+      var attributeListLength = fluttermojiProperties[attribute.key!]!.property!.length;
 
       /// Number of tiles per horizontal row,
       int gridCrossAxisCount;
@@ -264,9 +252,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
         itemBuilder: (BuildContext context, int index) => InkWell(
           onTap: () => onTapOption(index, i, attribute),
           child: Container(
-            decoration: index == i
-                ? widget.theme.selectedTileDecoration
-                : widget.theme.unselectedTileDecoration,
+            decoration: index == i ? widget.theme.selectedTileDecoration : widget.theme.unselectedTileDecoration,
             margin: widget.theme.tileMargin,
             padding: widget.theme.tilePadding,
             child: SvgPicture.string(
@@ -287,15 +273,8 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
           child: SvgPicture.asset(
             attribute.iconAsset!,
             package: 'fluttermoji',
-            height: attribute.iconsize ??
-                (widget.scaffoldHeight != null
-                    ? widget.scaffoldHeight! / heightFactor * 0.03
-                    : size.height * 0.03),
-            colorFilter: ColorFilter.mode(
-                attributeIndex == tabController.index
-                    ? widget.theme.selectedIconColor
-                    : widget.theme.unselectedIconColor,
-                BlendMode.srcIn),
+            height: attribute.iconsize ?? (widget.scaffoldHeight != null ? widget.scaffoldHeight! / heightFactor * 0.03 : size.height * 0.03),
+            colorFilter: ColorFilter.mode(attributeIndex == tabController.index ? widget.theme.selectedIconColor : widget.theme.unselectedIconColor, BlendMode.srcIn),
             semanticsLabel: attribute.title,
           ));
 
@@ -318,7 +297,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
             controller: tabController,
             children: attributeGrids,
           ),
-          // bottomNavigationBar: bottomNavBar(navbarWidgets),
+          bottomNavigationBar: bottomNavBar(navbarWidgets),
         ),
       ),
     );
